@@ -67,11 +67,11 @@ After confirming the change you may get a warning rather than the main page, sim
 ## First retrieval
 The first retrieval will take a long time, which may lead to time-out errors if you  start it from the webpage (*Retrieve* button on the bottom left). 
 
-By starting the retrieve command from the command line in the PHP container this will not happen and will also give you more of an idea what's going on (because of the output produced):
+By starting the retrieve command from the command line in the PHP container this will not happen and will also give you more of an idea what's going on (because of the output produced). You can do this with the following command:
 
 `docker exec -it spotweb_php php retrieve.php` 
 
 This will definitely take a long time, so grab yourself a cup of coffee or tea.
 
-For later updates you can use the *Retrieve* button, although you can also use the same command line again too if you prefer.
+For later updates you can use the *Retrieve* button, although you can also use the same command again if you prefer.
 
