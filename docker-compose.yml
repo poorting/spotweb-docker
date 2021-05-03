@@ -5,7 +5,7 @@ services:
     container_name: spotweb_nginx
     image: nginx:latest
     ports:
-      - 80:80
+      - 127.0.0.1:80:80
     volumes:
       - ./spotweb:/spotweb
       - ./spotweb.conf:/etc/nginx/conf.d/default.conf
