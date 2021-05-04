@@ -54,7 +54,7 @@ If everything is OK, this will take you to the last install page:
 
 <img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb4.png" width="100%" target="_blank">
 
-Choose Single user here, since the Nginx server is bound to 127.0.0.1 (localhost) anyway; having a Shared (or even Public) usage setup doesn't make much sense anyway; nor is this setup intended to be.
+Choose Single user here. Since the Nginx server is bound to 127.0.0.1 (localhost), having a Shared (or even Public) usage setup doesn't make much sense anyway; nor is this setup intended to be.
 
 Then fill in all the other things on the page.
 Finally click Create system. This will take a few moments.
@@ -78,7 +78,8 @@ By starting the retrieve command from the command line in the PHP container this
 
 `docker exec -it spotweb_php php retrieve.php` 
 
-This will definitely take a long time, so grab yourself a cup of coffee or tea.
+This will definitely take a long time (over an hour in my experience), so grab yourself a
+(number of) cup)(s) of coffee or tea.
 
 For later updates you can use the *Retrieve* button, although you can also use the same command again if you prefer.
 
