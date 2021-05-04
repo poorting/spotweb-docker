@@ -38,37 +38,37 @@ f686130171e1   postgres:12.0-alpine   "docker-entrypoint.s…"   15 seconds ago 
 
 Point your browser to [http://localhost/install.php](http://localhost/installp.php).
 This shows the first install page, checking if everything is OK:
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb1.png" width="50%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb1.png" width="75%" target="_blank">
 
 Click Next <br/>
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb2.png" width="75%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb2.png" width="100%" target="_blank">
 
 On this page choose PostgreSQL, and change the server to `spotweb_db`. The rest can be left as is. Click Verify database to check everything is indeed working and go to the next page.
 
 **NB**: *If you opted for not using PostgreSQL but using the file based SQLite instead: choose SQLite on this page rather than PostgreSQL. No further changes are needed for the rest of the installation.*
 
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb3.png" width="75%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb3.png" width="100%" target="_blank">
 
 Enter the (account) details for your usenet provider and check with the Verify usenet server button. <br/>
 If everything is OK, this will take you to the last install page:
 
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb4.png" width="75%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb4.png" width="100%" target="_blank">
 
 Choose Single user here, since the Nginx server is bound to 127.0.0.1 (localhost) anyway; having a Shared (or even Public) usage setup doesn't make much sense anyway; nor is this setup intended to be.
 
 Then fill in all the other things on the page.
 Finally click Create system. This will take a few moments.
 
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb5.png" width="75%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb5.png" width="100%" target="_blank">
 
 Follow the link to visit your Spotweb. On that page go to Settings:
 
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb6.png" width="25%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb6.png" width="50%" target="_blank">
 
 On the Retrieve tab choose a more suitable date for 'Retrieve spots after...', the default of 10 years or so is way way beyond any retention periode of a normal usenet server...
 After confirming the change you may get a warning rather than the main page, simply go to [http://localhost](http://localhost) again.
 <p>
-<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb7.png" width="50%" target="_blank">
+<img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb7.png" width="100%" target="_blank">
 </p>
 
 ## First retrieval
