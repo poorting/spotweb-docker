@@ -12,6 +12,7 @@ services:
     restart: unless-stopped
     depends_on:
       - php
+# Remove the next line if you use SQLite database rather than PostgreSQL
       - db
 
   php:
@@ -22,6 +23,9 @@ services:
     restart: unless-stopped
     volumes:
       - ./spotweb:/spotweb
+
+# Remove everything below this line
+# if you use SQLite database rather than PostgreSQL
 
   db:
     image: postgres:12.0-alpine
