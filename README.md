@@ -1,8 +1,13 @@
 # spotweb-docker
 
+## Introduction
 If you like [Spotweb](https://github.com/spotweb/spotweb) (like I do), but hate installing and configuring webservers and databases (like I do) then do as I do and simply use [Docker](https://www.docker.com/) for everything :-)=)
 
 Just for fun I thought to try how easy it is to create a Docker setup for Spotweb using Nginx and Postgres. Why Nginx and Postgres? Because I used those in another project recently, so fewer things to figure out. I never used Nginx (dockerized) with PHP before, but as expected loads of other people already have; so ample examples available.
+
+### Using SQLite rather than PostgreSQL
+You can also use this setup with an SQLite (simple file based) database, rather than Postgres. In that case there is no real need for the Postgres container. If you would rather use this setup then remove the appropriate lines in docker-compose.yml as indicated by the comments in there and make sure you choose SQLite for the database instead of PostgreSQL during installation (see below).
+
 
 ## Getting started
 You have Docker installed and can do docker-compose, right? OK.
@@ -40,6 +45,8 @@ Click Next <br/>
 
 On this page choose PostgreSQL, and change the server to `spotweb_db`. The rest can be left as is. Click Verify database to check everything is indeed working and go to the next page.
 
+**NB**: *If you opted for not using PostgreSQL but using the file based SQLite instead: choose SQLite on this page rather than PostgreSQL. No further changes are needed for the rest of the installation.*
+
 <img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb3.png" width="75%" target="_blank">
 
 Enter the (account) details for your usenet provider and check with the Verify usenet server button. <br/>
@@ -74,4 +81,27 @@ By starting the retrieve command from the command line in the PHP container this
 This will definitely take a long time, so grab yourself a cup of coffee or tea.
 
 For later updates you can use the *Retrieve* button, although you can also use the same command again if you prefer.
+
+## Stopping and starting
+
+If your docker service starts at boot then these containers will be started as well.
+
+If you only want to run these containers when making use of Spotweb, then you can start and stop them from the command line in the `spotweb-docker` directory (where the `docker-compose.yml` file is).
+
+For stopping the containers:
+```commandline
+docker-compose down
+```
+
+For starting the containers:
+```commandline
+docker-compose up -d
+```
+
+If you want to see the log output from the containers, do:
+```commandline
+docker-compose logs -f
+```
+
+
 
