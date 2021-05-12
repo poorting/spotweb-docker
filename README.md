@@ -36,7 +36,7 @@ f686130171e1   postgres:12.0-alpine   "docker-entrypoint.s…"   15 seconds ago 
 ```
 ## Configuring Spotweb
 
-Point your browser to [http://localhost/install.php](http://localhost/installp.php).
+Point your browser to [http://localhost/install.php](http://localhost/install.php).
 This shows the first install page, checking if everything is OK:
 <img src="https://github.com/poorting/spotweb-docker/raw/main/img/spotweb1.png" width="75%" target="_blank">
 
